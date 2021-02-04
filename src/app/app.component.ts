@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 
 // Variaveis para serem exportadas e vistas no html
 export class AppComponent {
-  name = 'Victor';
+  // name = 'Victor';
 }
