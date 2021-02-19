@@ -8,17 +8,12 @@ import { Router } from '@angular/router';
 })
 export class ProductsComponent implements OnInit {
 
-  private _router : Router;
+  constructor(private router: Router) { }
 
-  constructor(private router: Router) { 
-    this._router = router;
-  }
-
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
   navigateToProductCreateForm() {
-    this._router.navigate(['/products/create'])
+    this.router.navigate(['/products/create'])
   }
 
 }
