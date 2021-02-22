@@ -19,4 +19,11 @@ export class ProductReadComponent implements OnInit {
       console.log(products);
     });
   }
+
+  deleteProduct(id: string): void {
+    this.productService.delete(id).subscribe(() => {
+      this.productService.showMessage('Product Deleted');
+      this.ngOnInit();
+    });
+  }
 }
