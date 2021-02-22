@@ -1,3 +1,4 @@
+import { ProductUpdateComponent } from './components/product/product-update/product-update.component';
 import { ProductCreateFormComponent } from './components/product/product-create-form/product-create-form.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -6,22 +7,25 @@ import { ProductsComponent } from './views/products/products.component';
 
 const routes: Routes = [
   {
-    path: "",
+    path: '',
     component: HomeComponent,
   },
   {
-    path: "products",
+    path: 'products',
     component: ProductsComponent,
   },
   {
-    path: "products/create",
+    path: 'products/create',
     component: ProductCreateFormComponent,
-  }
-
+  },
+  {
+    path: 'products/update/:id',
+    component: ProductUpdateComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
